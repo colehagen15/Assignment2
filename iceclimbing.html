@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: lightsteelblue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  font-size: 150%;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  background-color: lightsteelblue;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+  background-color: white;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 22px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="lakepark.html">Lake Park</a></li>
+    <li><a href="latsch.html">Latsch State Park</a></li>
+    <li><a href="whitewater.html">Whitewater State Park</a></li>
+    <li><a class ="active" href="iceclimbing.html">Ice Climbing</a></li>
+  </ul>
+
+<div class="grid-container">
+  <div class="header">
+    <h1>Ice Climbing in Winona</h1>
+  </div>
+  
+  <div class="left" style="background-color:#f1f1f1;">Winona offers some awesome spots for climbing ice during the winter.</div>
+  <div class="middle" style="background-color:white;"><a href="https://www.youtube.com/watch?v=LRCcMPP7vLM"><img style="height:300px;width:600 px;text-align: center" src="pictures/Ice climbing winona.jpg">
+  </a></div>  
+  <div class="right" style="background-color:#f1f1f1;"> Click on the picture to watch a YouTube video about the climbing in Winona.</div>
+  
+  <div class="footer">
+  <p>Video by Caylan Larson. Check out his YouTube Channel <a href="https://www.youtube.com/channel/UCXBGLyqX8ueGytzLcfU8KsQ">here</a></p>
+  </div>
+</div>
+
+</body>
+</html>
