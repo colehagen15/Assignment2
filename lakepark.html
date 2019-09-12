@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: lightsteelblue;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  background-color: lightsteelblue;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+  background-color: white;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 22px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 30px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+</head>
+<body>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a class="active" href="lakepark.html">Lake Park</a></li>
+    <li><a href="latsch.html">Latsch State Park</a></li>
+    <li><a href="whitewater.html">Whitewater State Park</a></li>
+    <li><a href="iceclimbing.html">Ice Climbing</a></li>
+  </ul>
+
+<div class="grid-container">
+  <div class="header">
+    <h1>Lake Park</h1>
+  </div>
+  
+  <div class="left" style="background-color:#f1f1f1; font-size:  150%;">Lake Park is located in the heart of the city of Winona. It has many activites to experience depending on the season. Check out the table below to see what activites can be done during which seasons.  </div>
+  <div class="middle" style="background-color:white;"><img style="height:300px;width:600 px;text-align: center" src="pictures/Lake park.jpg">
+  </div>  
+  <div class="right" style="background-color:#f1f1f1;text-align: center;"> <h2>Activites</h2>
+
+    <table>
+      <tr>
+        <th>Summer</th>
+        <th>Winter</th>
+        
+      </tr>
+      <tr>
+        <td>Kayaking</td>
+        <td>Ice Skating</td>
+        
+      </tr>
+      <tr>
+        <td>Swimming</td>
+        <td>Ice Hockey</td>
+        </tr>
+      <tr>
+        <td>Biking</td>
+        <td>Indoor Activites</td>
+        </tr>
+    </table>
+</div>
+  
+  <div class="footer">
+  <p>Footer</p>
+  </div>
+</div>
+
+</body>
+</html>

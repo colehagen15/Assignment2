@@ -13,7 +13,7 @@ body {
 /* Style the header */
 .header {
   grid-area: header;
-  background-color: #f1f1f1;
+  background-color: lightsteelblue;
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -33,17 +33,19 @@ body {
 .middle,
 .right {
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  font-size: 150%;
 }
 
 /* Style the left column */
 .left {
   grid-area: left;
+  background-color: lightsteelblue;
 }
 
 /* Style the middle column */
 .middle {
   grid-area: middle;
+  background-color: white;
 }
 
 /* Style the right column */
@@ -54,7 +56,7 @@ body {
 /* Style the footer */
 .footer {
   grid-area: footer;
-  background-color: #f1f1f1;
+  background-color: white;
   padding: 10px;
   text-align: center;
 }
@@ -70,23 +72,58 @@ body {
       'footer footer footer footer footer footer';
   }
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 22px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
 </style>
 </head>
 <body>
 
-<h2>CSS Template using Grid</h2>
-<p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
-<p>Resize the browser window to see the responsive effect.</p>
-<p><strong>Note:</strong> The Grid Layout Module is not supported in Internet Explorer or Edge 15 eand earlier versions.</p>
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="lakepark.html">Lake Park</a></li>
+    <li><a href="latsch.html">Latsch State Park</a></li>
+    <li><a href="whitewater.html">Whitewater State Park</a></li>
+    <li><a href="iceclimbing.html">Ice Climbing</a></li>
+  </ul>
 
 <div class="grid-container">
   <div class="header">
-    <h2>Header</h2>
+    <h1>Winona, Minnesota</h1>
   </div>
   
-  <div class="left" style="background-color:#aaa;">Column</div>
-  <div class="middle" style="background-color:#bbb;">Column</div>  
-  <div class="right" style="background-color:#ccc;">Column</div>
+  <div class="left" style="background-color:#f1f1f1;">This website contains information about the Winona area and all it has to offer.</div>
+  <div class="middle" style="background-color:white;"><img style="height:300px;width:600 px;text-align: center" src="pictures/Winona Picture.jpg">
+  </div>  
+  <div class="right" style="background-color:#f1f1f1;"> Check out the links above to navigate to the other pages containing information about the great parks in the Winona area!</div>
   
   <div class="footer">
   <p>Footer</p>
