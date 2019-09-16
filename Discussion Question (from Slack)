@@ -1,0 +1,18 @@
+https://smucs.slack.com/archives/DMS0R4VQD/p1568600363000800    Code Portion (URL from Slack)
+https://smucs.slack.com/archives/DMS0R4VQD/p1568600618004400    Question (URL from Slack)
+
+@media (max-width: 600px) {
+ .grid-container  {
+   grid-template-areas:
+     'header header header header header header'
+     'left left left left left left'
+     'middle middle middle middle middle middle'
+     'right right right right right right'
+     'footer footer footer footer footer footer';
+ }
+}
+Here is the code which I wanted to understand further. Using the comments in the code from the website, 
+I can figure out that this code is used to create the responsive layout of the page. However, 
+looking at the actual code itself, I am struggling to understand how this actually creates this effect. 
+What portions of the code actually create the movement of the columns when you changed the size of the window? 
+This is an important portion to any website so I wanted to make sure I understood it in detail.
